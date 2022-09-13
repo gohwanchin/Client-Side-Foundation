@@ -1,0 +1,25 @@
+<div class="box-it">
+    <form [formGroup]="form" (ngSubmit)="processForm()">
+        <div>
+            <span>Name</span>
+            <input type="text" formControlName="name">
+        </div>
+        <div>
+            <span>Email</span>
+            <input type="text" formControlName="email">
+        </div>
+        <div>
+            <span>Gender</span>
+            <select formControlName="gender">
+                <option value="f">F</option>
+                <option value="m">M</option>
+                <option value="nb">NB</option>
+                <option value="na">NA</option>
+            </select>
+        </div>
+        <div class="">
+            <input type="checkbox" formControlName="newsletter">Check if you wish to receive our newsletter
+        </div>
+        <p><button type="submit" [disabled]="form.invalid">Register</button></p>
+    </form>
+</div>

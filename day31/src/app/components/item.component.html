@@ -1,0 +1,23 @@
+<h2>Item</h2>
+<form [formGroup]="form" (ngSubmit)="processForm()">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" formControlName="name"></td>
+        </tr>
+        <tr>
+            <td>Unit Price:</td>
+            <td><input type="number" formControlName="price"></td>
+        </tr>
+        <tr>
+            <td>Quantity:</td>
+            <td><select formControlName="quantity">
+                <option *ngFor="let n of numbers" value="{{n}}">{{n}}</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" [disabled]="form.invalid">Add to cart</button></td>
+        </tr>
+    </table>
+</form>

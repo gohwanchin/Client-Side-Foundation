@@ -1,0 +1,5 @@
+<form [formGroup]="form" (ngSubmit)="processForm()">
+    <div>Name: <input type="text" formControlName="name"></div>
+    <div>Email: <input type="text" formControlName="email"></div>
+    <div><button type="submit" [disabled]="form.invalid" class="btn btn-primary">Register</button></div>
+</form>

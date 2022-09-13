@@ -1,0 +1,10 @@
+.thumbnail{
+    width: 30vh;
+    height: auto;
+    border-radius: 2em;
+    margin: 0 1em;
+}
+div{
+    display: flex;
+    align-items: center;
+}

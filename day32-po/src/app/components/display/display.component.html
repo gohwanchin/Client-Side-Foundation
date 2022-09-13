@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>Name</th>
+    </tr>
+    <tr *ngFor="let oId of orderIds" (click)="editOrder(oId)">
+        <td>{{oId}}</td>
+        <td>{{orders[oId].name}}</td>
+    </tr>
+    <tr *ngFor="let key of orders">
+        <td>{{key}}</td>
+        <td>{{orders[key].name}}</td>
+    </tr>
+</table>

@@ -1,0 +1,14 @@
+<form [formGroup]="form" (ngSubmit)="processForm()">
+    <div>API: <input type="text" formControlName="api"></div>
+    <div>Search: <input type="text" formControlName="search"></div>
+    <div>Results: <select formControlName="results" >
+            <option *ngFor="let n of numbers" value="{{n}}">{{n}}</option>
+        </select></div>
+    <div>Rating: <select formControlName="rating">
+            <option value="g">G</option>
+            <option value="pg">PG</option>
+            <option value="pg13">PG-13</option>
+            <option value="r">R</option>
+        </select></div>
+    <div><button type="submit" [disabled]="form.invalid">Search</button></div>
+</form>

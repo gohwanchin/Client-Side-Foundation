@@ -1,0 +1,19 @@
+.red-border{
+    border: red 1px solid;
+}
+
+.box-it{
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.no-border{
+    border: 0px;
+}
+
+.notice{
+    font-style: italic;
+    font-size: 0.6em;
+}
