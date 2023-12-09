@@ -1,0 +1,21 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of contacts">
+            <td>{{c.name}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.mobile}}</td>
+            <td><button class="btn btn-danger btn-sm" (click)="delete(c.email)"><i class="fa-solid fa-trash"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+<div class="d-flex justify-content-end">
+    <ng-content></ng-content>
+</div>
